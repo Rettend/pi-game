@@ -1,4 +1,5 @@
 <script lang="ts">
+  import 'uno.css'
 </script>
 
 <main class="text-center p-1em my-0 mx-auto font-default">
