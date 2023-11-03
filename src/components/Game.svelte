@@ -6,10 +6,10 @@
 
 	let pi = getPi(length)
 	let input = ''
-	let gameOver = false 
+	let gameOver = false
 	let message = ''
 
-  $: input = input.replace(',', '.')
+	$: input = input.replace(',', '.')
 
 	function handleSubmit(event: Event) {
 		event.preventDefault()
@@ -19,16 +19,16 @@
 			input = ''
 		} else {
 			gameOver = true
-			message = `Game over! You reached ${length} digits.`
+			message = `Game over! You reached ${length - 2} digits.`
 		}
 	}
 
 	async function handleRestart() {
-		gameOver = false 
+		gameOver = false
 		message = ''
 		length = 3
 		pi = getPi(length)
-		input = '' 
+		input = ''
 	}
 </script>
 
